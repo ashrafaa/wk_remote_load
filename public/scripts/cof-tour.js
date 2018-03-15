@@ -6,13 +6,13 @@ var World = {
     //console.log(`from WK: ${JSON.stringify(stopData)}`);
     console.log(`Title stop: ${stopData.title}`);
     // set stop plaque image
-    var plaqueImg = new AR.ImageResource("../images/" + stopData.image);
+    var plaqueImg = new AR.ImageResource("../../images/" + stopData.image);
     var stopPlaque = new AR.ImageDrawable(plaqueImg, 8, {
       zOrder: 1,
     });
 
     // set indicator to the stop
-    var indicatorImg = new AR.ImageResource("../images/indi.png");
+    var indicatorImg = new AR.ImageResource("../../images/indi.png");
     var indicator = new AR.ImageDrawable(indicatorImg, 0.1, {
       verticalAnchor: AR.CONST.VERTICAL_ANCHOR.TOP
     });
@@ -24,7 +24,7 @@ var World = {
     var stopLocation = new AR.RelativeLocation(null, 1, 1);
 
     // set video related
-    const vidName = `../video/${stopData.id}.mp4`;
+    const vidName = `../../video/${stopData.id}.mp4`;
     var stopVideo = new AR.VideoDrawable(vidName, 12, {
       enabled: false,
       translate: {
